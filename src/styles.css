@@ -1,0 +1,55 @@
+/* 
+* ADD STYLES TO ME 
+* YOU WILL NEED TO ADD MORE SELECTORS
+*/
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery .card {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: min(250px, 100%);
+  height: min(250px, 100%);
+  flex: 1 1 250px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.card .card-title {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.card .img-wrapper {
+  height: 75%;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out 0.3s;
+}
+
+.card img:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+  transition: all ease-in-out 0.3s;
+}
+
+@media (min-width: 600px) {
+  .gallery .card {
+    /* does not change border radius if just .card */
+    border-radius: 5px 35px 5px 35px;
+  }
+}
